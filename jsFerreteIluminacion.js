@@ -10,15 +10,55 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- var Cantidad;
- var Marca;
- var precioDescuento;
+ 	var Cantidad;
+ 	var Marca;
+ 	var precioDescuento;
 
- var mensaje;
+ 	var mensaje;
+ 	var IIBB;
 
- Cantidad=document.getElementById("Cantidad").value;
- Marca=document.getElementById("Marca").value;
- precioDescuento=document.getElementById("precioDescuento").value;
+ 	Cantidad=document.getElementById("Cantidad").value;
+ 	Marca=document.getElementById("Marca").value;
+ 	precioDescuento=document.getElementById("precioDescuento").value;
 
- 
+ 	Cantidad=parseInt(Cantidad);
+ 	precioDescuento=parseInt(precioDescuento);
+
+ 	cuenta=Cantidad*35;
+ 	if (Cantidad>5);
+ 		{
+ 			mensaje=cuenta-cuenta*50/100;
+
+ 		}if ((Cantidad==5) && (Marca=="ArgentinaLuz"))
+ 		{
+ 			mensaje=cuenta-cuenta*40/100;
+ 		}else
+ 		
+ 		{
+ 			mensaje=cuenta-cuenta*30/100;
+
+ 		}
+ 		if ((Cantidad==4)&&(Marca=="ArgentinaLuz"||"FelipeLamparas")) 
+ 			{
+ 				mensaje=cuenta-cuenta*25/100;
+ 			}else
+ 			{
+ 				mensaje=cuenta-cuenta*20/100;
+
+ 			}if ((Cantidad==3)&&(Marca=="ArgentinaLuz"))
+ 			{
+ 				mensaje=cuenta-cuenta*15/100;
+
+ 			}if ((Cantidad==3)&&(Marca=="FelipeLamparas"))
+ 			{
+ 				mensaje=cuenta-cuenta*15/100;
+ 			}else
+ 			{
+ 				mensaje=cuenta-cuenta*5/100;
+
+ 			}if (mensaje>120)
+ 			 {
+ 			 	IIBB=mensaje*10/100;
+ 			 }
+ 			 alert("Usted pago "+mensaje+" siendo "+IIBB+" de IIBB");			
 }
